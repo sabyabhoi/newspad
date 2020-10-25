@@ -1,12 +1,17 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-<div class="container">
+<div class="container pt-3">
     {% if blog_list %}
-    <ul>
-        {% for blog in blog_list %}
-        <li><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a></li>
-        {% endfor %}
-    </ul>
+    {% for blog in blog_list %}
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">{{ blog.title }}</h3>
+            <h6 class="card-subtitle text-muted py-1">{{ blog.pub_date }}</h6>
+            <p class="card-text">{{ blog.content }}</p>
+            <a class="btn btn-primary" href="{% url 'blog:detail' blog.id %}">Read more</a>
+        </div>
+    </div>
+    {% endfor %}
     {% endif %}
 </div>
 {% endblock content %}

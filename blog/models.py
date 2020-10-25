@@ -1,7 +1,10 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Blog(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     pub_date = models.DateTimeField('date published')
     content = models.TextField()
 
