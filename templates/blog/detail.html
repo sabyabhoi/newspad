@@ -11,15 +11,11 @@
         background-color: #eee;
     }
 </style>
-<body>
+<body class="container">
     
-    {% if blog_list %}
-    <ul>
-        {% for blog in blog_list %}
-        <li><a href="polls/{{ blog.id }}">{{ blog.title }}</a></li>
-        {% endfor %}
-    </ul>
-    {% endif %}
+    <h1>{{ blog.title }}</h1>
+    <small>{{ blog.pub_date }}</small>
+    <p>{{ blog.content }}</p>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
 </body>

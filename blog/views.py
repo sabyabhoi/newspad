@@ -1,16 +1,12 @@
-from django.http import HttpResponse
-from django.shortcuts import render
-from django.template import loader
+from django.http import HttpResponse, Http404
+from django.shortcuts import render, get_object_or_404    
 from .models import Blog
 
 # Create your views here.
 def index(request):
     blog_list = Blog.objects.order_by('-pub_date')
-    template = loader.get_template('blog/index.html')
-    context = {
-        'blog_list': blog_list
-    }
-    return HttpResponse(template.render(context, request))
+    return render(request, 'blog/index.html', context={ 'blog_list': blog_list })
 
-def single(request, blog_id):
-    return HttpResponse('You are viewing Blog number: {}'.format(blog_id))
+def detail(request, blog_id):
+    blog = get_object_or_404(Blog, pk=blog_id)
+    return render(request, 'blog/detail.html', {'blog': blog})
