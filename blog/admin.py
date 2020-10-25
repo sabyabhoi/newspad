@@ -6,6 +6,6 @@ from .models import Blog
 @admin.register(Blog)
 class BlogAdmin(admin.ModelAdmin):
     prepopulated_fields = { 'slug': ('title', )}
-    list_display = ('title', 'pub_date')
-    list_filter = ('pub_date',)
-    search_fields = ('title', 'pub_date')
+    list_display = ('title', 'author', 'pub_date')
+    list_filter = ('pub_date', 'author')
+    search_fields = ('title', 'author', 'pub_date')
