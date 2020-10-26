@@ -8,7 +8,7 @@
             <h3 class="card-title">{{ blog.title }}</h3>
             <h6 class="card-subtitle text-muted py-1">{{ blog.pub_date }}</h6>
             <p class="card-text">{{ blog.brief }}</p>
-            <a class="btn btn-primary" href="{% url 'blog:detail' blog.slug %}">Read more</a>
+            <a class="btn btn-primary" href="{% url 'blog:detail' blog.pk %}">Read more</a>
         </div>
     </div>
     {% endfor %}
