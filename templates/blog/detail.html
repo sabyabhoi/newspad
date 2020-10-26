@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container">
     <h1>{{ blog.title }}</h1>
-    <small>{{ blog.pub_date }}</small>
-    <p>{{ blog.content }}</p>
+    <h6 class="text-muted">Published on {{ blog.pub_date }} by {{ blog.author }}</h6>
+    <p>{{ blog.content|safe }}</p>
 </div>
 {% endblock content %}
