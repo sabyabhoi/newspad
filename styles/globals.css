@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply font-mono 
+		bg-white text-gray-900
+		dark:bg-gray-900 dark:text-white;
+  }
+
+  .header {
+    @apply text-3xl font-bold 
+			underline py-2 underline-offset-1 
+			decoration-4 
+			decoration-gray-400 hover:decoration-gray-900
+			dark:decoration-gray-500 dark:hover:decoration-neutral-50
+			transition-all duration-[120] ease-linear;
+  }
+}
