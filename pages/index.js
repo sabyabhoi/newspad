@@ -8,7 +8,7 @@ import NavBar from '../components/NavBar';
 
 const Home = () => {
   return (
-    <div className='container mx-auto flex flex-col w-9/12'>
+    <div className='container mx-auto flex flex-col w-11/12 lg:w-9/12'>
       <NavBar />
       <Head>
         <title>Sabya&apos;s website</title>
