@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import { GrLinkedin, GrGithub } from 'react-icons/gr';
 import { MdEmail } from 'react-icons/md';
 
@@ -71,11 +70,11 @@ const IconLink = ({ icon, link, children }) => {
   return (
     <li className='flex flex-row items-center gap-x-3 my-2'>
       {icon}
-      <Link href={link}>
+      <a href={link}>
         <div className='font-bold text-cyan-800 dark:text-cyan-200 no-underline hover:underline'>
           {children}
         </div>
-      </Link>
+      </a>
     </li>
   );
 };
