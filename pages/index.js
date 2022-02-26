@@ -8,7 +8,7 @@ import Web from '../components/Web';
 import useTheme from '../components/useTheme';
 
 const Home = () => {
-	const [theme, setTheme] = useTheme('light');
+	const [theme, setTheme] = useTheme('dark');
 
   return (
     <div className='container mx-auto flex flex-col w-11/12 lg:w-9/12'>

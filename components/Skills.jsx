@@ -20,6 +20,7 @@ const Skills = () => {
           <li>Tensorflow</li>
         </ul>
         <li>R</li>
+				<li>Dart/Flutter</li>
         <li>Bash scripting</li>
         <li>LaTeX</li>
         <li>groff/nroff</li>
