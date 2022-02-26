@@ -6,7 +6,8 @@
   body {
     @apply font-mono 
 		bg-paper text-gray-900
-		dark:bg-gray-900 dark:text-white;
+		dark:bg-gray-900 dark:text-white
+		transition-all duration-[120] ease-linear;
   }
 
   .header {

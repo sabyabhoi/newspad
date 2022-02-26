@@ -5,10 +5,14 @@ import Work from '../components/Work';
 import Skills from '../components/Skills';
 import Web from '../components/Web';
 
+import useTheme from '../components/useTheme';
+
 const Home = () => {
+	const [theme, setTheme] = useTheme('light');
+
   return (
     <div className='container mx-auto flex flex-col w-11/12 lg:w-9/12'>
-      <NavBar />
+      <NavBar theme={theme} setTheme={setTheme}/>
       <Head>
         <title>Sabya&apos;s website</title>
       </Head>
@@ -16,6 +20,7 @@ const Home = () => {
       <div className='flex flex-row justify-center'>
         <h1 className='text-6xl font-bold py-2 my-10'>Hi, I&apos;m Sabya.</h1>
       </div>
+
       <Work />
       <Skills />
       <Web />
