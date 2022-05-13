@@ -1,7 +1,7 @@
 <script></script>
 
 <header>
-	<div>Sabyasachi Bhoi</div>
+	<div><b>Sabyasachi Bhoi</b></div>
 	<div>change theme</div>
 </header>
 
