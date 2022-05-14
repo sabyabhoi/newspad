@@ -1,13 +1,12 @@
 <script>
 	export let title = "Title";
-	export let content = "Content";
 </script>
 
 <section>
 	<div>
-		<h2>{title}</h2>
+		<h1>{title}</h1>
 	</div>
-	<p>{content}</p>
+	<p><slot /></p>
 </section>
 
 <style>
@@ -16,9 +15,17 @@
 		row-gap: 0.5rem;
 		flex-direction: column;
 		justify-content: flex-start;
+		align-items: flex-start;
+		margin-block: 1rem;
 	}
 
-	h2:hover {
+	h1 {
 		text-decoration: underline;
+		text-decoration-color: rgba(255, 255, 255, 0.8);
+		text-decoration-thickness: 0.2rem;
+	}
+
+	h1:hover {
+		text-decoration-color: rgba(255, 255, 255, 1);
 	}
 </style>

@@ -9,25 +9,26 @@
 		<div class="banner">
 			<h1>Hi, I'm Sabya.</h1>
 		</div>
-		<Details/>
+		<Details />
 	</div>
 </main>
 
 <style>
 	main {
-		background-color: black;
-		color: orange;
-		height: 100vh;
+		background-color: #111827;
+		line-height: 1.3;
+		color: white;
+		height: 100%;
+		overflow: scroll;
 	}
 	.page {
-		width: 80%;
+		width: min(90%, 65rem);
 		margin-inline: auto;
 	}
 	.banner {
 		padding-block: 2rem;
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
+		display: grid;
+		place-items: center;
 		font-size: 2rem;
 	}
 </style>
