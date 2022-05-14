@@ -12,3 +12,7 @@ body {
   animation-duration: 1s;
   transition: all 120ms linear;
 }
+
+li {
+	margin-block: 0.25rem;
+}
