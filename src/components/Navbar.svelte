@@ -1,13 +1,13 @@
 <script>
 	import { MoonFill, SunFill } from "svelte-bootstrap-icons";
 
-	let lightMode = false;
+	export let lightMode = false;
 </script>
 
 <header>
 	<div><b>Sabyasachi Bhoi</b></div>
 	<div>
-		<button>
+		<button on:click>
 			{#if lightMode}
 				<MoonFill />
 			{:else}
@@ -28,7 +28,7 @@
 	}
 
 	button {
-		color: white;
+		color: inherit;
 		background: none;
 		padding: 0.8rem;
 		border: none;
