@@ -21,8 +21,9 @@
 
 	h1 {
 		text-decoration: underline;
-		text-decoration-color: rgba(255, 255, 255, 0.8);
+		text-decoration-color: rgba(255, 255, 255, 0.5);
 		text-decoration-thickness: 0.2rem;
+		font-size: 1.75rem;
 	}
 
 	h1:hover {

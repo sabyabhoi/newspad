@@ -1,35 +1,27 @@
 <script>
 	import InfoSection from "./InfoSection.svelte";
+	import LinkElement from "./LinkElement.svelte";
 	import { Github, Linkedin, EnvelopeFill } from "svelte-bootstrap-icons";
 </script>
 
 <InfoSection title="On the Web">
 	<ul class="links">
-		<li>
-			<a href="https://github.com/sabyabhoi/"> <Github />@sabyabhoi</a>
-		</li>
-		<li>
-			<a href="https://www.linkedin.com/in/sabyabhoi/">
-				<Linkedin />sabyabhoi</a
-			>
-		</li>
-		<li>
-			<a href="mailto:sabyabhoi@gmail.com"
-				><EnvelopeFill />sabyabhoi@gmail.com</a
-			>
-		</li>
+		<LinkElement link="https://github.com/sabyabhoi/" title="@sabyabhoi">
+			<Github />
+		</LinkElement>
+		<LinkElement
+			link="https://www.linkedin.com/in/sabyabhoi/"
+			title="sabyabhoi"
+		>
+			<Linkedin />
+		</LinkElement>
+		<LinkElement link="mailto:sabyabhoi@gmail.com" title="sabyabhoi@gmail.com">
+			<EnvelopeFill />
+		</LinkElement>
 	</ul>
 </InfoSection>
 
 <style>
-	a {
-		color: white;
-		font-weight: bold;
-		text-decoration: none;
-	}
-	a:hover {
-		text-decoration: underline;
-	}
 	.links {
 		list-style-type: none;
 	}
