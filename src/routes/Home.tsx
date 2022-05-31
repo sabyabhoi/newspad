@@ -1,21 +1,7 @@
-import Section from '../components/Section.tsx';
-import IconLink from '../components/IconLink.tsx';
-import { Accessor, Setter } from 'solid-js';
+import Section from '../components/Section';
+import IconLink from '../components/IconLink';
 import { BsGithub, BsLinkedin, BsEnvelopeFill } from 'solid-icons/bs';
-
-const Banner = () => {
-  let style = {
-    'padding-block': '2rem',
-    display: 'grid',
-    'place-items': 'center',
-    'font-size': '2rem',
-  };
-  return (
-    <div style={style}>
-      <h1>Hi, I'm Sabya.</h1>
-    </div>
-  );
-};
+import Banner from '../components/Banner';
 
 const Work = () => {
   return (
@@ -23,7 +9,7 @@ const Work = () => {
       I'm a second-year engineering student at Birla Institute of Technology and
       Science. I'm a Linux enthusiast. I use GNU/Linux as my primary driver, and
       like to tinker around with new, free and open-source projects. I'm
-      currently an intern at <a href='onfinance.in'>OnFinance</a>
+      currently an intern at <a href='https://onfinance.in/'>OnFinance</a>.
     </Section>
   );
 };
@@ -67,7 +53,7 @@ const Links = () => {
           'list-style': 'none',
         }}
       >
-        <IconLink link='#' title='@sabyabhoi'>
+        <IconLink link='https://github.com/sabyabhoi/' title='@sabyabhoi'>
           <BsGithub />
         </IconLink>
         <IconLink
@@ -87,7 +73,7 @@ const Links = () => {
 const Home = () => {
   return (
     <div style={{ 'padding-bottom': '1.5rem' }}>
-      <Banner />
+      <Banner>Hi, I'm Sabya.</Banner>
       <Work />
       <Skills />
       <Links />
