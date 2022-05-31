@@ -1,0 +1,18 @@
+main {
+	width: min(90%, 65rem);
+	margin-inline: auto;
+}
+
+.App {
+  height: 100%;
+}
+
+.dark {
+  background-color: #111827;
+  color: white;
+}
+
+.light {
+  background-color: #fffeee;
+  color: black;
+}
