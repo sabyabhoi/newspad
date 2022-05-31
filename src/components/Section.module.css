@@ -1,0 +1,48 @@
+.info {
+	padding-block: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	row-gap: 0.65rem;
+	align-items: flex-start;
+}
+
+.title {
+	font-size: 1.8rem;
+	text-decoration: underline;
+	text-decoration-thickness: 0.2rem;
+}
+
+.light {
+	text-decoration-color: rgba(0, 0, 0, 0.5);
+}
+
+.light:hover {
+	text-decoration-color: rgba(0, 0, 0, 1.0);
+}
+
+.dark {
+	text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark:hover {
+	text-decoration-color: rgba(255, 255, 255, 1.0);
+}
+
+ul {
+	list-style-position: inside;
+}
+
+ul ul {
+	padding-left: 1.5rem;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: underline;
+}
+
