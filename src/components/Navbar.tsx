@@ -1,25 +1,22 @@
 import { Link } from 'solid-app-router';
 import { BsMoonFill, BsSunFill } from 'solid-icons/bs';
+import { FaSolidProjectDiagram } from 'solid-icons/fa';
 import { useTheme } from '../ThemeProvider';
+import styles from './Navbar.module.css';
 
 const Navbar = () => {
   const [dark, setDark] = useTheme();
 
-  let headerStyle = {
-    padding: '1rem',
-    'padding-inline': '0.5rem',
-    display: 'flex',
-    'flex-direction': 'row',
-    'justify-content': 'space-between',
-    'align-items': 'center',
-		'column-gap': '4rem'
-  };
-
   return (
-    <header style={headerStyle}>
-        <Link href='/'>Sabyasachi Bhoi</Link>
-			<span style={{'flex-grow': 1}}/>
-        <Link href='/projects' style={{'font-weight': 'normal'}}>Projects</Link>
+    <header>
+      <Link href="/projects" class={styles.menubtn}>
+        <FaSolidProjectDiagram size='18px' />
+      </Link>
+      <Link href='/' class={styles.title}>Sabyasachi Bhoi</Link>
+      <span class={styles.space} />
+      <Link href='/projects' class={styles.project}>
+        Projects
+      </Link>
       <button onclick={() => setDark(!dark())}>
         {dark() ? <BsSunFill /> : <BsMoonFill />}
       </button>

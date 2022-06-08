@@ -1,0 +1,42 @@
+header {
+  padding: 1rem;
+  padding-inline: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 4rem;
+}
+
+.menubtn {
+  display: none;
+}
+
+.project {
+  font-weight: normal;
+}
+
+.space {
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 640px) {
+  .menubtn {
+    display: block;
+  }
+
+  .project {
+    display: none;
+  }
+  .space {
+    flex-grow: 0;
+  }
+  .title {
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+  }
+  header {
+    column-gap: 1rem;
+  }
+}
