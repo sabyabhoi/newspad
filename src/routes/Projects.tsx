@@ -1,37 +1,7 @@
 import Banner from '../components/Banner';
-import { JSX } from 'solid-js/jsx-runtime';
+import Card from '../components/Card';
 import styles from './Projects.module.css';
-import { createSignal, For, Show } from 'solid-js';
-import { useTheme } from '../ThemeProvider';
-
-const Card = ({
-  title,
-  url,
-  children,
-}: {
-  title: string;
-  url: string;
-  children: JSX.Element;
-}) => {
-  const [dark, setDark] = useTheme();
-  const [hover, setHover] = createSignal(false);
-
-  return (
-    <div
-      class={styles.card}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      onClick={() => window.open(url)}
-      style={{ 'background-color': dark() ? '#282f3c' : '#e5e4d6' }}
-    >
-      <div class={styles.content}>
-        <Show when={hover()} fallback={<h1>{title}</h1>}>
-          <p>{children}</p>
-        </Show>
-      </div>
-    </div>
-  );
-};
+import { For } from 'solid-js';
 
 const ProjectGrid = () => {
   const projects = [

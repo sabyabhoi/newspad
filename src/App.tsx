@@ -7,9 +7,6 @@ import styles from './App.module.css';
 import { useTheme } from './ThemeProvider';
 import { Route, Routes } from 'solid-app-router';
 
-//class={(dark() ? styles.dark : styles.light) + ' ' + styles.App}
-// <Navbar dark={dark} setDark={setDark}/>
-
 const App: Component = () => {
 	const [dark, setDark] = useTheme();
   return (
